@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>太极图</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #f3f3f3;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 10px;
+        }
+        
+        @keyframes rotate {
+            from {
+                transform: rotate(0);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .taiji {
+            position: relative;
+            overflow: hidden;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            animation: rotate 30s linear infinite;
+        }
+        
+        .taiji:hover {
+            animation-play-state: paused;
+            cursor: pointer;
+        }
+        
+        .taiji div:first-child {
+            position: absolute;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            background-color: #fff;
+        }
+        
+        .taiji div:nth-child(2) {
+            position: absolute;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background-color: #000;
+        }
+        
+        .taiji div:nth-child(3) {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-color: #000;
+        }
+        
+        .taiji div:nth-child(4) {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+        
+        .taiji div:nth-child(5) {
+            position: absolute;
+            top: 125px;
+            left: 275px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+        
+        .taiji div:nth-child(6) {
+            position: absolute;
+            bottom: 125px;
+            left: 275px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #000;
+        }
+        
+        .container p {
+            margin-top: 1em;
+            font-size: 36px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="taiji">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <p>一阴一阳之谓道</p>
+    </div>
+</body>
+
+</html>
